@@ -12,6 +12,8 @@ This is a project that I have created an aplication that submits your Akan name 
 * HTML
 * CSS
 * bootsrap
+*javascript
+
 #BDD
 - Enter your birthday details
  You will input your details by typing or by clicking on the provided calender.
