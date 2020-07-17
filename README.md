@@ -2,7 +2,7 @@
 This Repository contains code for my akan name aplication.
 ##### By Rebecca Nayere
 ## Description
-This is a project that I have created an aplication that submits your Akan name also known as Ghana name. Akan names are names given to children in Ghana according to the day of the week they were born also known as the ("day names").The application is going to calculate and display using your gender female or male and dates provided.
+This is an aplication that submits your Akan name also known as Ghana name. Akan names are names given to children in Ghana according to the day of the week they were born also known as the ("day names").The application prompts the user to input their day of birth then it calculates and displays the name of the user in accordance to the gender of the user. 
                
 ## Setup Instructions
 * git clone 
