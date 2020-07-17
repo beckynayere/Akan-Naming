@@ -1,0 +1,235 @@
+<html>
+   <head>
+<meta name="viewport" content="width=device-width, initial-scale="> 
+       <link href="https://www.jsdelivr.com/package/npm/bulma" rel="stylesheet">
+      <title>Akan Naming System</title>
+      <link  rel="stylesheet" href="css/bootstrap.css">
+      <script src ="js/script.js"></script>
+   </head>
+
+   <body>
+     <div class ="form elements">
+       <div class ="description">
+         <h1 class="display for text primary ">The Akan Naming System</h1>
+         <p>This a website that is used to determine the an individuals name based on their day of birth.<br>
+          An individual is prompted to enter their birth details then according to that one is able to know his/her <em>Akan Name</em>
+<br> If you are male you will be named as:</p>
+<ul> 
+<ol>Sunday: Kwasi</ol>
+
+<ol>Monday: Kwadwo</ol>
+
+<ol>Tuesday: Kwabena<ol>
+
+<ol>Wednesday: Kwaku</ol>
+
+<ol>Thursday:  Yaw</ol>
+
+<ol>Friday: Kofi</ol>
+
+</ol>Saturday: Kwame</ol> 
+
+</ul>  
+
+<p>If you are male you will be named as follows:</p>
+<ul>
+  <ol>Sunday: Akosua</ol>
+
+  <ol>Monday: Adwoa</ol>
+
+<ol>Tuesday: Abenaa</ol>
+
+<ol>Wednesday: Akua</ol>
+
+<ol>Thursday:  Yaa</ol>
+
+<ol>Friday: Afua</ol>
+
+<ol>Saturday: Ama</ol>
+</ul>
+
+<form>
+<h1 class= "text primary"> Enter your birthday date </h1>
+<input type="text" id="day" class=form control" placeholder ="day">
+<p id ="invalid day"></p>
+
+<input type="text" id="month" class=form control" placeholder ="month">
+<p id ="invalid month"></p>
+
+<input type="text" id="year" class=form control" placeholder ="year">
+<p id ="invalid year"></p>
+
+<h1 text-primary>Select your gender</h1>
+<label for="male">Male: </label> 
+<input type ="checkbox" id ="male" class="">
+<label for="female"> Female :</label>
+<input type ="checkbox" id ="male" class="">
+</div>
+     </div>
+       <table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="gender">Gender</abbr></th>
+
+      <th><abbr title="Date of Birth">DoB</abbr></th>
+      <th><abbr title="name">Akana name</abbr></th>
+      <th><abbr title="day of the week">Day</abbr></th>
+
+
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <th><abbr title="gender">Gender</abbr></th>
+
+      <th><abbr title="Date of Birth">DoB</abbr></th>
+      <th><abbr title="name">Akana name</abbr></th>
+      <th><abbr title="day of the week">Day</abbr></th>
+
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+
+      <td id="1">38</td>
+      <td id="2">23</td>
+      <td id="3">12</td>
+      <td id="4">3</td>
+
+
+    </tr>
+    </tbody>
+</table>
+
+
+     </div>
+     <script type = "text/javascript">
+        var element3 = document.getElementById(3);
+       var element4 = document.getElementById(4);
+       let gender = prompt("Gender")
+       if(gender ==! "male" || gender ==! "female"){
+         alert("invalid gender")
+         gender = prompt("Re-enter Gender")
+       }
+     let Dte = prompt("Date")
+     if(Dte > 31 || Dte <= 0){
+       alert("invalid Date")
+       Dte = prompt("re-enter Date")
+     }else if(Dte ==null ){
+       alert("fill date")
+     }
+        let Month = prompt("Month")
+        if(Month > 12 || Month <= 0){
+       alert("invalid Month")
+          Month = prompt("re-enter Month")
+     }
+        var Year = prompt("Year")
+
+        if( Year <= 0){
+       alert("invalid Date")
+          Year = prompt("re-enter Year")
+     }
+        var DoB  = Month + " "+ Dte + " ," + Year
+        alert(DoB)
+
+        //this is how you get the day
+         var dt = new Date( DoB + " " + "00:15:00");
+        //
+
+        var dayOfTheWeek =  dt.getDay()
+        console.log("dayOfTheWeek",dayOfTheWeek)
+        console.log("mygender",gender)
+
+        function kk(gender) {
+          console.log("qqqqqqqqqqqqmygender",gender)
+          let name = ""
+          let day = ""
+
+
+         if (gender == "male" || gender == 'Male') {
+          console.log("male running")
+
+          if(dayOfTheWeek == "0"){
+            name= "kwasi"
+            day="sunday"
+          }
+          else if(dayOfTheWeek == '1'){
+            name= "Kwando"
+            day="monday"
+          }
+          else if(dayOfTheWeek == '2'){
+            name= "Kwabena"
+            day="tuesday"
+          }
+          else if(dayOfTheWeek == '3'){
+            name= "kwaku"
+            day="wednesday"
+          }
+          else if(dayOfTheWeek == '4'){
+            name= "yaw"
+            day="thursday"
+          }
+          else if(dayOfTheWeek == '5'){
+            name= "koffi"
+            day="friday"
+          }else if(dayOfTheWeek == '6'){
+            name= "kwame"
+            day="saturday"
+          }
+        }
+
+
+
+        else if(gender === "female" || gender == "Female"){
+          if(dayOfTheWeek == '0'){
+            name= "akosua"
+            day="sunday"
+          }
+          else if(dayOfTheWeek == '1'){
+            name= "aduoa"
+            day="monday"
+          }
+          else if(dayOfTheWeek == '2'){
+            name= "abenaa"
+            day="tuesday"
+          }
+          else if(dayOfTheWeek == '3'){
+            name= "akua"
+            day="wednesday"
+          }
+          else if(dayOfTheWeek == '4'){
+            name= "yaa"
+            day="thursday"
+          }
+          else if(dayOfTheWeek =='5'){
+            name= "afua"
+            day="friday"
+          }else if(dayOfTheWeek == '6'){
+            name= "amua"
+            day="saturday"
+          }
+        }
+          else{
+          alert("Re-enter your Gender");
+
+
+        }
+
+          alert(name)
+          element3.innerText = name;
+          element4.innerText = day;
+      }
+        kk(gender)
+
+       var element = document.getElementById(1);
+       var element2 = document.getElementById(2);
+
+
+       element.innerText = gender;
+       element2.innerText = DoB;
+
+
+
+      </script>
+   </body>
+</html>
