@@ -1,3 +1,59 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@beckynayere 
+beckynayere
+/
+Rebecca-Nayere
+1
+11
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Rebecca-Nayere/styles..css
+@beckynayere
+beckynayere add style.css on github
+Latest commit c0831e6 4 days ago
+ History
+ 1 contributor
+339 lines (281 sloc)  5.85 KB
+  
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font si
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
