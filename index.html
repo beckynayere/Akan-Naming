@@ -13,144 +13,149 @@
 </head>
 
 <body>
-  <div class="body background-image">
-    <img src="download.jpeg" alt="background image" class="background"></div>
+  <style>
+    .container {
+      margin: 0;
+      padding: 10rem;
+      background-image:url('image/download.jpeg');
+    }
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
+    /* box-sizing and font sizing */
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
 
-      /* box-sizing and font sizing */
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
+    html {
+      box-sizing: border-box;
 
-      html {
-        box-sizing: border-box;
-
-        /* Set font size for easy rem calculations
+      /* Set font size for easy rem calculations
    * default document font siem = 10px, 62.5% = 10px
   */
-        font-size: 62.5%;
-        scroll-behavior: smooth;
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    .project-title {
+      font-size: 2rem;
+      padding: 2rem 0.5rem;
+      font-size: 26px;
+      padding-bottom: 1em;
+    }
+
+    .body background-image {
+
+      background-image: url("image/download.jpeg");
+      background-color: #2d85b0;
+      background-size: 100% 700px;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+    }
+
+    h1 {
+      color: white;
+
+    }
+
+    p {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #2d85b0;
+
+    }
+
+    h1 {
+      color: white;
+
+    }
+
+    p {
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #2d85b0;
+    }
+
+    h1 {
+      color: white;
+
+    }
+
+    p {
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    #ph {
+      width: 65px;
+      padding: 7px;
+      border: none;
+      border-radius: 3px;
+      outline: 0;
+    }
+
+    label {
+
+      color: aquamarine;
+      font-family: sans-serif;
+      font-size: 18px;
+      font-style: italic;
+
+
+
+    }
+
+    @media (max-width: 61.25em) {
+      html {
+        font-size: 58%;
       }
+    }
 
-      .project-title {
-        font-size: 2rem;
-        padding: 2rem 0.5rem;
-        font-size: 26px;
-        padding-bottom: 1em;
+    /* 460px / 16px = 28.75em */
+    @media (max-width: 28.75em) {
+      html {
+        font-size: 55%;
       }
+    }
 
-      body {
+    /* Base styles */
 
-        background-image: url("download.jpeg");
-        background-color: #2d85b0;
-        background-size: 100% 700px;
-        background-repeat: no-repeat;
-      }
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      /* 18px */
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--main-white);
+    }
 
-      h1 {
-        color: white;
+    /* Footer */
 
-      }
+    footer {
+      font-weight: 100;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 1rem;
+      background: var(--main-gray);
+      border-top: 4px solid var(--main-red);
+    }
 
-      p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 16px;
-      }
+    footer>p {
+      margin: 1rem;
+    }
+  </style>
 
-      body {
-        background-color: #2d85b0;
-
-      }
-
-      h1 {
-        color: white;
-
-      }
-
-      p {
-        font-family: sans-serif;
-        font-size: 16px;
-      }
-
-      body {
-        background-color: #2d85b0;
-      }
-
-      h1 {
-        color: white;
-
-      }
-
-      p {
-        font-family: sans-serif;
-        font-size: 16px;
-      }
-
-      #ph {
-        width: 65px;
-        padding: 7px;
-        border: none;
-        border-radius: 3px;
-        outline: 0;
-      }
-
-      label {
-
-        color: aquamarine;
-        font-family: sans-serif;
-        font-size: 18px;
-        font-style: italic;
-
-
-
-      }
-
-      @media (max-width: 61.25em) {
-        html {
-          font-size: 58%;
-        }
-      }
-
-      /* 460px / 16px = 28.75em */
-      @media (max-width: 28.75em) {
-        html {
-          font-size: 55%;
-        }
-      }
-
-      /* Base styles */
-
-      body {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.8rem;
-        /* 18px */
-        font-weight: 400;
-        line-height: 1.4;
-        color: var(--main-white);
-      }
-
-      /* Footer */
-
-      footer {
-        font-weight: 100;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 1rem;
-        background: var(--main-gray);
-        border-top: 4px solid var(--main-red);
-      }
-
-      footer>p {
-        margin: 1rem;
-      }
-    </style>
+  <div class="container">
+    <!-- <div class="body background-image">
+      <img src="image/download.jpeg" alt="background image" class="background">
+    </div> -->
 
     <div class="form elements">
       <div class="description">
@@ -158,44 +163,7 @@
         <p>This a website that is used to determine the an individuals name based on their day of birth.<br>
           An individual is prompted to enter their birth details then according <br>
           to that one is able to know his/her <em>Akan Name</em><br>
-          <strong> you are male you will be named as</strong>:</p>
-        <ul>
-
-          <ol>Sunday: Kwasi</ol>
-
-          <ol>Monday: Kwadwo</ol>
-
-          <ol>Tuesday: Kwabena</ol>
-
-          <ol>Wednesday: Kwaku</ol>
-
-          <ol>Thursday: Yaw</ol>
-
-          <ol>Friday: Kofi</ol>
-
-          </ol>Saturday: Kwame</ol>
-
-        </ul>
-
-        <p><strong> you are male you will be named as follows</strong>:</p>
-
-        <ul>
-          <ol>Sunday: Akosua</ol>
-
-          <ol>Monday: Adwoa</ol>
-
-          <ol>Tuesday: Abenaa</ol>
-
-          <ol>Wednesday: Akua</ol>
-
-          <ol>Thursday: Yaa</ol>
-
-          <ol>Friday: Afua</ol>
-
-          <ol>Saturday: Ama</ol>
-
-        </ul>
-
+          
         <form>
           <h1 class="text primary"> Enter your birthday date </h1>
           <input type="text" id="day" class=form control" placeholder="day">
@@ -214,41 +182,42 @@
           <label for="female"> Female :</label>
           <input type="checkbox" id="male" class="">
       </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><abbr title="gender">Gender</abbr></th>
+
+          <th><abbr title="Date of Birth">DoB</abbr></th>
+          <th><abbr title="name">Akana name</abbr></th>
+          <th><abbr title="day of the week">Day</abbr></th>
+
+
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th><abbr title="gender">Gender</abbr></th>
+
+          <th><abbr title="Date of Birth">DoB</abbr></th>
+          <th><abbr title="name">Akana name</abbr></th>
+          <th><abbr title="day of the week">Day</abbr></th>
+
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+
+          <td id="1">38</td>
+          <td id="2">23</td>
+          <td id="3">12</td>
+          <td id="4">3</td>
+
+
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th><abbr title="gender">Gender</abbr></th>
-
-        <th><abbr title="Date of Birth">DoB</abbr></th>
-        <th><abbr title="name">Akana name</abbr></th>
-        <th><abbr title="day of the week">Day</abbr></th>
-
-
-      </tr>
-    </thead>
-    <tfoot>
-      <tr>
-        <th><abbr title="gender">Gender</abbr></th>
-
-        <th><abbr title="Date of Birth">DoB</abbr></th>
-        <th><abbr title="name">Akana name</abbr></th>
-        <th><abbr title="day of the week">Day</abbr></th>
-
-      </tr>
-    </tfoot>
-    <tbody>
-      <tr>
-
-        <td id="1">38</td>
-        <td id="2">23</td>
-        <td id="3">12</td>
-        <td id="4">3</td>
-
-
-      </tr>
-    </tbody>
-  </table>
 
 
   </div>
