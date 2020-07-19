@@ -1,5 +1,6 @@
 
-  Skip to content
+  ze = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rSkip to content
 Search or jump to…
 
 Pull requests
@@ -54,8 +55,7 @@ html {
   box-sizing: border-box;
 
   /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+   * default document font siem = 10px, 62.5% = 10px
   */
   font-size: 62.5%;
   scroll-behavior: smooth;
