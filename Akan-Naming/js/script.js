@@ -5,7 +5,7 @@ let DoB = document.getElementById("birthDate")
 //var female = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
 
 function rightAnswer() {
-  response.innerText = ""
+  response.innerHTML = ""
 }
 
 function akanName() {
@@ -20,13 +20,13 @@ function validDate() {
 
   let d = newDate(DoB.value).getDate();
   let m = newMonth(DoB.value).getMonth() + 1;//var n = month[d.getMonth()];
-  let y = newYear(DoB.value).getYear();
+  let y = newYear(DoB.value).getFullYear();
 
   if (d <= 0 || d > 31) {
     alert('enter a valid day of the week')
   } else if (m <= 0 || m > 12) {
     alert('enter a valid month')
-  } else if (y > new date().getYear()) {
+  } else if (y > new date().getFullYear()) {
     alert('enter a valid year')
   } else {
     giveName()
@@ -46,37 +46,37 @@ for (let i = 0, length = gender.length; i < length; i++) {
 
 
     if (gender[i].value == 'male') {
-      
+
 if (gender == "male" || gender == 'Male') {
   console.log("male running")
 
   if (dayOfTheWeek == 0) {
-    response.innerText = "Kwasi"
+    response.innerHTML  = "Kwasi"
   }
   else if (dayOfTheWeek == 1) {
 
-    response.innerText = "kwando"
+    response.innerHTML = "kwando"
   }
   else if (dayOfTheWeek == 2) {
 
-    response.innerText = "kwabena"
+    response.iinnerHTML  = "kwabena"
   }
   else if (dayOfTheWeek == 3) {
 
-    response.innerText = "kwaku"
+    response.innerHTML = "kwaku"
   }
   else if (dayOfTheWeek == 4) {
 
-    response.innerText = "yaw"
+    response.innerHTML  = "yaw"
   }
   else if (dayOfTheWeek == 5) {
 
-    response.innerText = "koffi"
+    response.innerHTML = "koffi"
 
   }
   else {
 
-    response.innerText = "kwame"
+    response.innerHTML  = "kwame"
   }
 }
 
@@ -84,29 +84,29 @@ if (gender == "male" || gender == 'Male') {
   if (gender === "female" || gender == "Female") {
     if (dayOfTheWeek == 0) {
 
-      response.innerText = "akosua"
+      response.innerHTML= "akosua"
     }
     else if (dayOfTheWeek == 1) {
 
-      response.innerText = "aduoa"
+      response.innerHTML = "aduoa"
     }
     else if (dayOfTheWeek == 2) {
 
-      response.innerText = "abenaa"
+      response.innerHTML = "abenaa"
     }
     else if (dayOfTheWeek == 3) {
 
-      response.innerText = "akua"
+      response.innerHTML  = "akua"
     }
     else if (dayOfTheWeek == 4) {
 
-      response.innerText = "yaa"
+      response.innerHTML  = "yaa"
     }
     else if (dayOfTheWeek == 5) {
-      response.innerText = "afua"
+      response.innerHTML = "afua"
     }
     else {
-      response.innerText = "ama"
+      response.innerHTML= "ama"
     }
   }
 
