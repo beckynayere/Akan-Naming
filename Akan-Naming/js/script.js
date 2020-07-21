@@ -1,227 +1,92 @@
 
-let dob = document.getElementById("birthDate")
-
-
-     function rightAnswer() {
-      response.innerHTML = ""
-
+	let yearOfBirth = document.getElementById("year-input").value;
+	let monthOfBirth = Number(document.getElementById("month-input").value);
+	let dayOfBirth = Number(document.getElementById("day-input").value);
+	let genders = document.getElementsByName("gender");
   
-
-function rightAnswer() {
-  response.innerHTML = ""
-  
-}
-
-function akanName() {
-  validDate()
-}
-
-//validity
-
-//date validity
-function validDate() {
-
-  let d = newDate(dob.value).getDate();
-  let m = newMonth(dob.value).getMonth() + 1;//var n = month[d.getMonth()];
-  let y = newYear(dob.value).getFullYear();
-
-  if (d <= 0 || d > 31) {
-    alert('enter a valid day of the week')
-  } else if (m <= 0 || m > 12) {
-    alert('enter a valid month')
-  } else if (y > new date().getFullYear()) {
-    alert('enter a valid year')
-  } else {
-    giveName()
-  }
-}
-//akan naming
-
-function giveName() {
-  let gender = document.getElementsByName("gender")
-  let response = document.getElementsById("response")
-
-  let dayOfTheWeek = newDate(dob).getDay()
-}
-
-for (let i = 0, length = gender.length; i < length; i++) {
-  if (gender[i].checked) {
-
-    if (gender[i].value == 'male') {
-      var field = form.elements[i]
-        if (!field.name || field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') continue;
- if (field.type === 'select') {
-			for (var n = 0; n < field.options.length; n++) {
-				if (!field.options[n].selected) continue;
-				serialized.push({
-					name: field.name,
-					value: field.options[n].value
-				});
-			}
+	// function to get gender
+	function getGender () {
+	  for (let gender of genders){
+		if (gender.checked){
+		  return gender.value;
 		}
-
-		// Convert field data to a query string
-		else if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
-			serialized.push({
-				name: field.name,
-				value: field.value
-			});
-		}
-    }
-    
-    return serialized;
-
-};
-
-var form = document.querySelector('#form-data');
-
-var data = serializeArray(form)
-
-day = new Date(data[0]['value']).getDay()
-
-akanName = ""
-
-if(data[1]['value'] === 'female'){
-    for(let i = 0; i<female.length; i++){
-        if(day === i) {
-            akanName = female[i]
-            document.getElementById("akanName").innerHTML = akanName
-
-        }
-    }
-
-}else if(data[1]['value'] === 'male'){
-    for(let i = 0; i<male.length; i++){
-        if(day === i) {
-            akanName = male[i]
-            document.getElementById("akanName").innerHTML = akanName
-        }
-
-  if (dayOfTheWeek === 0) {
-    response.innerHTML  = "Kwasi"
-  }
-  else if (dayOfTheWeek === 1) {
-
-    response.innerHTML = "kwando"
-  }
-  else if (dayOfTheWeek === 2) {
-
-    response.iinnerHTML  = "kwabena"
-  }
-  else if (dayOfTheWeek == 3) {
-
-    response.innerHTML = "kwaku"
-  }
-  else if (dayOfTheWeek == 4) {
-
-    response.innerHTML  = "yaw"
-  }
-  else if (dayOfTheWeek == 5) {
-
-    response.innerHTML = "koffi"
-
-  }
-  else {
-
-    response.innerHTML  = "kwame"
-  }
-}
-
-    } else {
-  if (dayOfTheWeek === 0){
-      response.innerHTML= "akosua"
-    }
-    else if (dayOfTheWeek === 1) {
-
-      response.innerHTML = "aduoa"
-    }
-    else if (dayOfTheWeek === 2) {
-
-      response.innerHTML = "abenaa"
-    }
-    else if (dayOfTheWeek === 3) {
-
-      response.innerHTML  = "akua"
-    }
-    else if (dayOfTheWeek === 4) {
-
-      response.innerHTML  = "yaa"
-    }
-    else if (dayOfTheWeek === 5) {
-      response.innerHTML = "afua"
-    }
-    else {
-      response.innerHTML= "ama"
-    }
-  }
-}
+	  }
+	}
   
-//else {
-  alert("Re-enter your Gender");
-
-
-}
-
-  alert(name)
-  response.iinnerHTML = giveName;
-  //element4.innerText = day;
-
-
-
-[i] (gender)
-let gender = document.getElementsByName("gender")
-let response = document.getElementsById("response")
-
-
-document.getElementById="dob"
-document.getElementsByName="gender"
-document.getElementsById="response"
-
-
-
-
-
-
-
-  //var element3 = document.getElementById(3);
-  //var element4 = document.getElementById(4);
-  //let gender = prompt("Gender")
-  //if (gender == ! "male" || gender == ! "female") {
-  //      alert("invalid gender")
-  //gender = prompt("Re-enter Gender")
-  //}
-
-  //if (Dte > 31 || Dte <= 0) {
-  //alert("invalid Date")
-  //Dte = prompt("re-enter Date")
-  //} else if (Dte == null) {
-  //alert("fill date")
-  //}
-  //let Month = prompt("Month")
-  //if (Month > 12 || Month <= 0) {
-  //      alert("invalid Month")
-  //Month = prompt("re-enter Month")
-  //}
-  //var Year = prompt("Year")
-
-  //if (Year <= 0) {
-  //      alert("invalid Date")
-  //Year = prompt("re-enter Year")
-  //}
-  //var DoB = Month + " " + Dte + " ," + Year
-  //alert(DoB)
-
-  //this is how you get the day
-  //var dt = new Date(DoB + " " + "00:15:00");
-  //
-
-  //var dayOfTheWeek = dt.getDay()
-  //console.log("dayOfTheWeek", dayOfTheWeek)
-  //console.log("mygender", gender)
-
-  //function kk(gender) {
-  //      console.log("qqqqqqqqqqqqmygender", gender)
-  //let name = ""
-  //let day = ""
-
-
+	let myGenderValue = getGender();
+	console.log(myGenderValue);
+  
+	// validation functions
+	function monthValidator () {
+	  if (monthOfBirth < 1 || monthOfBirth > 12) {
+		return false;
+	  } else {
+		return true;
+	  }
+	}
+  
+	function dayValidator () {
+	  if (monthOfBirth === 2 && Number(yearOfBirth)%4 === 0) {
+		if (dayOfBirth > 28 || dayOfBirth < 1) {
+		  return false;
+		} else if (monthOfBirth === 2 && dayOfBirth > 29) {
+		  return false;
+		} else if (monthOfBirth === 2 && dayOfBirth < 1) {
+		  return false;
+		} else {
+		  return true;
+		}
+	  } else if (dayOfBirth < 1 || dayOfBirth > 31){
+		return false;
+	  } else {
+		return true;
+	  }
+	}
+  
+	//validation variables
+	let monthValid = monthValidator();
+	let dayValid = dayValidator();
+  
+	//formula to determine day of birth (Sunday = 1, Monday = 2)etc..
+	let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
+			((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dayOfBirth)%7);
+  
+	//creating arrays of Akan names for males & females and days of the week
+	let daysOfWeek = [
+	  "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+	];
+  
+	let maleAkanNames = [
+	  "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
+	];
+  
+	let femaleAkanNames = [
+	  "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
+	];
+  
+	//generating and index value to select items on arrays
+	let index;
+	// fix formula bug
+	if (dayOfWeekNumber == 0){
+	  index = 6;
+	} else {
+	  index = dayOfWeekNumber - 1;
+	}
+  
+	console.log(index);
+  
+	if (myGenderValue == "male" && monthValid && dayValid) {
+	  document.getElementById('result').textContent = "You were born on a " + daysOfWeek[index] + " , your Akan name is " + maleAkanNames[index];
+	  document.getElementById('display-name').textContent = "Here is your Akan name: ";
+	  document.getElementById('result').style.fontSize = "18px";
+	  document.querySelector('h1').textContent = "Hello" + " " + maleAkanNames[index];
+	  return false;
+	} else if (myGenderValue == "female" && monthValid && dayValid) {
+	  document.getElementById('result').textContent = "You were born on a " + daysOfWeek[index] + " , your Akan name is " + femaleAkanNames[index];
+	  document.getElementById('display-name').textContent = "Here is your Akan name: ";
+	  document.getElementById('result').style.fontSize = "18px";
+	  document.querySelector('h1').textContent = "Hello" + " " + femaleAkanNames[index];
+	  return false;
+	} else {
+	  alert("You entered an invalid day or month, please try again");
+	}
