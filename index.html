@@ -45,7 +45,7 @@
     }
 
     .body background-image {
-
+     
       background-image: url("image/namingsystem.jpeg");
       background-color: #2d85b0;
       background-size: 300px 700px;
@@ -163,24 +163,12 @@
       color: var(--main-white);
     }
 
-    /* Footer */
-
-    footer {
-      font-weight: 100;
-      display: flex;
-      justify-content: space-evenly;
-      padding: 1rem;
-      background: var(--main-gray);
-      border-top: 4px solid var(--main-red);
-    }
-
-    footer>p {
-      margin: 1rem;
-    }
+   
   </style>
 
   <div class="container">
     <div class="row">
+            <div class="col">
     
     <div class="form elements">
       <div class="description">
@@ -205,6 +193,7 @@
                 <label class="form-check-label" for="female">Female</label>
               </div>
             </div>
+            
     
             <div class="form-group">
               <button type="submit" onclick="akanName()" class="btn btn-primary" id="submitBtn">Submit</button></br>
@@ -218,8 +207,9 @@
           </form>
         </div>
       </div>
+   
     
-      <script src="js/script.js"></script>
+     
     </div>
     <footer>
     <section class="flex h-32 bg-gray-900 border border">
@@ -229,6 +219,7 @@
         </p>
       </section>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
 

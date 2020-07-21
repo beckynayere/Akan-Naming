@@ -1,50 +1,11 @@
 
-let DoB = document.getElementById("birthDate")
+let dob = document.getElementById("birthDate")
 
-//let d = prompt("Date")
-//if(d > 31 || Dte <= 0){
-  //alert("invalid Date")
-  //Dte = prompt("re-enter Date")
-//}else if(d ==null ){
-  //alert("fill date")
-//}
-  // let m = prompt("Month")
-   //if(m > 12 || m <= 0){
-  //alert("invalid Month")
-    // Month = prompt("re-enter Month")
-//}
-  // let y = prompt("FullYear")
-
-   //if( y <= 0){
-  //alert("invalid Date")
-    // Year = prompt("re-enter Year")
-//}
-  // var DoB  = m + " "+ d + " ," + y
-   //alert("DoB")
-
-   //this is how you get the day
-    //var d = new Date( DoB + " " + "00:15:00");
-   //
-
-   //var dayOfTheWeek =  d.getDay()
-   //console.log("dayOfTheWeek",dayOfTheWeek)
-   //console.log("gender",gender)
-
-   //function kk(gender) {
-     //console.log("qqqqqqqqqqqqmygender",gender)
-
-     //let akanName= ""
-     //let dayOfTheWeek = ""
-     
-
-   }
 
      function rightAnswer() {
       response.innerHTML = ""
 
-    if (gender == "male" || gender == 'Male') {
-     console.log("male running")
-
+  
 
 function rightAnswer() {
   response.innerHTML = ""
@@ -57,13 +18,12 @@ function akanName() {
 
 //validity
 
-
 //date validity
 function validDate() {
 
-  let d = newDate(DoB.value).getDate();
-  let m = newMonth(DoB.value).getMonth() + 1;//var n = month[d.getMonth()];
-  let y = newYear(DoB.value).getFullYear();
+  let d = newDate(dob.value).getDate();
+  let m = newMonth(dob.value).getMonth() + 1;//var n = month[d.getMonth()];
+  let y = newYear(dob.value).getFullYear();
 
   if (d <= 0 || d > 31) {
     alert('enter a valid day of the week')
@@ -81,38 +41,82 @@ function giveName() {
   let gender = document.getElementsByName("gender")
   let response = document.getElementsById("response")
 
-  let dayOfTheWeek = newDate(DoB).getDay()
+  let dayOfTheWeek = newDate(dob).getDay()
 }
 
 for (let i = 0, length = gender.length; i < length; i++) {
   if (gender[i].checked) {
 
-
     if (gender[i].value == 'male') {
+      var field = form.elements[i]
+        if (!field.name || field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') continue;
+ if (field.type === 'select') {
+			for (var n = 0; n < field.options.length; n++) {
+				if (!field.options[n].selected) continue;
+				serialized.push({
+					name: field.name,
+					value: field.options[n].value
+				});
+			}
+		}
 
-if (gender == "male" || gender == 'Male') {
-  console.log("male running")
+		// Convert field data to a query string
+		else if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
+			serialized.push({
+				name: field.name,
+				value: field.value
+			});
+		}
+    }
+    
+    return serialized;
 
-  if (dayOfTheWeek == '0') {
+};
+
+var form = document.querySelector('#form-data');
+
+var data = serializeArray(form)
+
+day = new Date(data[0]['value']).getDay()
+
+akanName = ""
+
+if(data[1]['value'] === 'female'){
+    for(let i = 0; i<female.length; i++){
+        if(day === i) {
+            akanName = female[i]
+            document.getElementById("akanName").innerHTML = akanName
+
+        }
+    }
+
+}else if(data[1]['value'] === 'male'){
+    for(let i = 0; i<male.length; i++){
+        if(day === i) {
+            akanName = male[i]
+            document.getElementById("akanName").innerHTML = akanName
+        }
+
+  if (dayOfTheWeek === 0) {
     response.innerHTML  = "Kwasi"
   }
-  else if (dayOfTheWeek == '1') {
+  else if (dayOfTheWeek === 1) {
 
     response.innerHTML = "kwando"
   }
-  else if (dayOfTheWeek == '2') {
+  else if (dayOfTheWeek === 2) {
 
     response.iinnerHTML  = "kwabena"
   }
-  else if (dayOfTheWeek == '3') {
+  else if (dayOfTheWeek == 3) {
 
     response.innerHTML = "kwaku"
   }
-  else if (dayOfTheWeek == '4') {
+  else if (dayOfTheWeek == 4) {
 
     response.innerHTML  = "yaw"
   }
-  else if (dayOfTheWeek == '5') {
+  else if (dayOfTheWeek == 5) {
 
     response.innerHTML = "koffi"
 
@@ -124,53 +128,54 @@ if (gender == "male" || gender == 'Male') {
 }
 
     } else {
-  if (gender === "female" || gender == "Female") {
-    if (dayOfTheWeek == 0) {
-
+  if (dayOfTheWeek === 0){
       response.innerHTML= "akosua"
     }
-    else if (dayOfTheWeek == 1) {
+    else if (dayOfTheWeek === 1) {
 
       response.innerHTML = "aduoa"
     }
-    else if (dayOfTheWeek == 2) {
+    else if (dayOfTheWeek === 2) {
 
       response.innerHTML = "abenaa"
     }
-    else if (dayOfTheWeek == 3) {
+    else if (dayOfTheWeek === 3) {
 
       response.innerHTML  = "akua"
     }
-    else if (dayOfTheWeek == 4) {
+    else if (dayOfTheWeek === 4) {
 
       response.innerHTML  = "yaa"
     }
-    else if (dayOfTheWeek == 5) {
+    else if (dayOfTheWeek === 5) {
       response.innerHTML = "afua"
     }
     else {
       response.innerHTML= "ama"
     }
   }
-  else{
-    alert("Re-enter your Gender");
-
-
-  }
-
-    alert(name)
-    response.iinnerHTML = name;
-    //element4.innerText = day;
 }
-  kk(gender)
-  let gender = document.getElementsByName("gender")
-  let response = document.getElementsById("response")
+  
+//else {
+  alert("Re-enter your Gender");
 
- 
-  document.getElementById="DoB"
-  document.getElementsByName="gender"
-  document.getElementsById="response"
- 
+
+}
+
+  alert(name)
+  response.iinnerHTML = giveName;
+  //element4.innerText = day;
+
+
+
+[i] (gender)
+let gender = document.getElementsByName("gender")
+let response = document.getElementsById("response")
+
+
+document.getElementById="dob"
+document.getElementsByName="gender"
+document.getElementsById="response"
 
 
 
@@ -218,30 +223,5 @@ if (gender == "male" || gender == 'Male') {
   //      console.log("qqqqqqqqqqqqmygender", gender)
   //let name = ""
   //let day = ""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
