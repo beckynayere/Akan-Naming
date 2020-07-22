@@ -1,77 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link href="https://www.jsdelivr.com/package/npm/bulma" rel="stylessheet">
-  <title>Akan Naming System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/images/akantitle.ico" />
+  <title>Akan Names</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento,Playfair+Display+SC,Sorts+Mill+Goudy &display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Gugi|Kalam" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stlessheet" href="CSS/styles.css">
-
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body>
-  <div style="background-image: url('image/namingsystem.jpeg');">
-
+<body class="container-fluid" style="background-image:url(image/namingsystem.jpeg);">
+  <div id="heading"> 
+    <img src="images/akan.png" alt=" ">
+    <h1>Welcome To Akan Names</h1>
+    <h2 id="get">Get Your Akan Name Quick!!!!!!!</h2>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="content">
-          <div class="container">
-              <h1>The Akan Naming System</h1>
-              <p>
-                  <div class="research"> 
-        <div class="form elements">
-          <div class="description">
-    
-            <p>This a website that is used to determine the an individuals name based on their day of birth.<br>
-              An individual is prompted to enter their birth details then according <br>
-              to that one is able to know his/her <em>Akan Name</em><br></p>
-
-              <form class="myform" onsubmit="return getAkanName()">
-                <label for="year-of-birth">
-                    Year:
-                        <input id="year-input" type="number" name="year-of-birth" placeholder="YYYY" value=""  required min="1990" max="2020">
-                </label>
-                <label for="month-of-birth">
-                    Month:
-                        <input id="month-input" type="number" name="month-of-birth" placeholder="MM" value="" required min="1" max="12">
-                </label>
-                  <label for="date-of-birth">
-                    Day:
-                        <input id="day-input" type="number" name="day-of-birth" placeholder="DD" value="" required
-                        min="1" max="31">
-                </label>
-                  <br>
-                <label for="gender">
-                    <div id ="gender ">
-                         Male
-                            <input id="male-input" type="radio" name="gender" value="male" required>
-                        Female
-                             <input id="female-input" type="radio" name="gender" value="female" required>
-                    </div>
-                </label>
-                <br><br>
-                <input id="get-name" type="submit" name="" value="submit">
-                <br><br>
-              </form>
-              <form onsubmit="return clearInput()">
-                <input class="clear" type="submit" value="Clear input">
-              </form>
-                <h4 id = display-name><strong>:</strong></h4>
-                    <p id="result"></p>
-                    <script src="js/script.js"></script>
-              </div> 
-  </body>
-      <footer>
-        <section class="flex h-32 bg-gray-900 border border">
-          <p class="m-auto">
-            &copy; Created by
-            <em>@ Rebecca Nayere</em>
+  <div class="overlay">
+      <div class="container">
+        <h2>Enter Your Details Here!</h2>
+        <form name="myForm" class="form" onsubmit="validate();">
+          <div class="form-group">
+            <label for="number">Year of Birth:</label>
+            <input type="number" class="form-control" id="year" placeholder="Year of Birth Eg: 2019 if born in 2019" name="year">
+          </div>
+          <div class="form-group">
+            <label for="month">Month of Birth:</label>
+            <input type="number" class="form-control" id="month" placeholder="Month of Birth" name="month">
+          </div>
+          <div class="form-group">
+            <label for="date">Date of Birth:</label>
+            <input type="number" class="form-control" id="date" placeholder="Date of Birth eg 05 for May" name="date">
+          </div>
+          <div class="form-group">
+            <label for="month">Gender</label><br>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" id="male">&nbsp; Male 
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="gender" id="female">&nbsp; Female 
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="findName();">Get Name</button>
+          <br>
+        </form>
+        <p id="results"> </p>
+      </div>
+  </div>
+  <div class="card-deck">
+    <div class="card ">
+      <div class="card-body text-center">
+        <p class="card-text">Akan names are derived from Ghanian culture. Get your Akan name by filling the form above!</p>
+      </div>
+    </div>
+    <div class="card ">
+        <div class="card-body text-center">
+          <p class="card-text">Names are based on gender and the date you were born. <br>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-globe fa-stack-1x" style="color:rgb(188, 222, 252)"></i>
+              </span><a href="http://www.afropedea.org/akan-names"> More info on Akan names</a>
           </p>
-        </section>
-      </footer>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="card-body text-center">
+          <p class="card-text">Frequently in Ghana, children are given their first name as a 'day name' 
+            which corresponds to the day in the week they were born.</p>
+        </div>
+      </div>
+  </div>
+  <footer class="page-footer ">
+    <div class="footer-copyright text-center py-3">Copyright © 2020:
+      <a href="https://github.com/Owiti-Charles"> @ Rebecca Nayere</a>
+    </div>
+  </footer>
+<script src="javascript/script.js"></script>
+</body>
 </html>
